@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --primary-color-dark: #1cdd3c;
+    --primary-color:#0e65a0; 
+    --text-dark: #0fb1fcf1;
+    --text-light: #000000;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #11a2e6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-light);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 70%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* ... (CSS lainnya) ... */
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-left: 40px;
+    padding: 1.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2 a {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.header h2 a:hover {
+    color: var(--primary-color-dark);
+}
+
+span {
+    color: var(--primary-color-dark);
+}
+
+ul {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.3rem;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #069adf;
+}
+
+ul li a:hover {
+    color: #000000;
+}
+
+header {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    padding-top: 130px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-left: 400px;
+    padding: 2rem;
+    color:#ffffff;
+}
+
+.head {
+    text-align: center;
+}
+
+.head h2 {
+    color: #000000;
+}
+
+.head2 {
+    text-align: center;
+}
+
+
+.head2 .contoh {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color:#ffffff;
+}
+.head2 .contoh img {
+    width: 250px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 300px; /* Sesuaikan tinggi sesuai kebutuhan */
+    border-radius: 5%;
+transition: transform 0.5s ease;/* Hapus border-radius untuk membuat gambar berbentuk persegi */
+    margin-right: 20px; /* Sesuaikan margin sesuai kebutuhan */
+  }
+/* ... (CSS lainnya) ... */
+
+

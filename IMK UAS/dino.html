@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- library driver js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <!-- library driver js -->
+    <link rel="stylesheet" href="style.css">
+    <title>DINOSAURUS</title>
+</head>
+<body>
+  <!--navbar-->
+        <nav>
+            <div class="container">
+                <div class="header">
+                    <h2>
+                        <a href="#">SEJARAH</a>
+                    </h2>
+                </div>
+                <!-- list navbar -->
+                <ul>
+                    <ul>
+                        <li><a href="dino.html" id="SEJARAH DINOSAURUS">SEJARAH</a></li>
+                        <li><a href="jenis.html" id="JENIS JENIS DINOSAURUS">JENIS</a></li>
+                        <li><a href="makanan.html" id="PENGELOMPOKAN MAKANAN DINOSAURUS">MAKANAN</a></li>
+                        <li><a href="kreativitas.html" id="DINOSAURUS MENJADI BAHAN KREATIVITAS">KREATIVITAS</a></li>
+                        
+                        
+                  
+                </ul>
+                <!-- list navbar -->
+            </div>
+        </nav>
+  <!--navbar-->  
+  <!--isi halaman-->    
+        <section>
+            <div class="section_container">
+                <div class="content">
+                  <!-- teks -->
+                    <h1 class="title">
+                     <span><br/>SEJARAH</span> DINOSAURUS
+                    </h1>
+                    <!-- deskripsi -->
+                    <p class="description">
+                        Dinosaurus adalah makhluk prasejarah yang hidup sekitar 230 juta tahun lalu hingga punah sekitar 65 juta tahun yang lalu. Mereka memiliki beragam ukuran, mulai dari yang sekecil ayam hingga yang sebesar bangunan. Dinosaurus hidup di berbagai habitat dan terbagi menjadi beberapa kelompok, seperti Sauropoda (dinosaurus bertubuh besar), Theropoda (dinosaurus pemakan daging), dan Ornithischia (dinosaurus herbivora). Kemusnahan mereka diyakini terjadi akibat sejumlah faktor, termasuk dampak dari bencana alam dan perubahan lingkungan.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/sejarah1.jpg" alt="profile" />
+                </div>
+            </div>
+        </section>
+  <!--isi halaman--> 
+
+        <!--driver js-->
+        <script>
+          // Penjelasan singkat mengenai penggunaan Driver.js
+          document.addEventListener('DOMContentLoaded', function() {
+              // Inisialisasi Driver.js pada saat konten dimuat
+              const driver = window.driver.js.driver;
+              const step = driver({
+                  onDestroyed: () => document.activeElement.blur()
+              });
+      
+              // Daftar ID elemen yang akan disorot oleh Driver.js
+              const elementIds = ['SEJARAH DINOSAURUS', 'JENIS JENIS DINOSAURUS', 'PENGELOMPOKAN MAKANAN DINOSAURUS', 'DINOSAURUS MENJADI BAHAN KREATIVITAS'];
+              let allInstructionsDisplayed = false;
+      
+              // Setiap elemen dalam daftar diberi event listener untuk sorotan saat fokus
+              elementIds.forEach((id, index) => {
+                  const formEl = document.getElementById(id);
+      
+                  formEl.addEventListener('focus', () => {
+                      if (!allInstructionsDisplayed) {
+                          step.highlight({
+                              element: formEl,
+                              popover: {
+                                  description: `MENAMPILKAN HALAMAN DINOSAURUS YANG MEMBAHAS TENTANG ${id}`,
+                                  side: 'bottom'
+                              }
+                          });
+                      }
+                  });
+      
+                  // Mengatur perubahan fokus untuk elemen berikutnya atau menyelesaikan tur instruksi
+                  formEl.addEventListener('blur', () => {
+                      step.destroy();
+                      const nextIndex = (index + 1) % elementIds.length;
+                      if (nextIndex !== 0 || allInstructionsDisplayed) {
+                          const nextFormEl = document.getElementById(elementIds[nextIndex]);
+                          nextFormEl.focus();
+                      } else {
+                          allInstructionsDisplayed = true;
+                      }
+                  });
+              });
+      
+              // Fokus pada elemen pertama dalam daftar
+              const firstFormEl = document.getElementById(elementIds[0]);
+              firstFormEl.focus();
+          });
+      </script>
+      <!--driver js-->
+</body>
+</html>

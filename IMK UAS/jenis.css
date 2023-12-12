@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root{
+    --primary-color: #00a0fd;
+    --primary-color-dark: #35e712;
+    --text-dark: #0885d8;
+    --text-light: #000000;
+    --max-width: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    width: 70%;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    max-width: var(--max-width);
+    margin: auto;
+    margin-left: 40px;
+    padding: 1.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2 a{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.header h2 a:hover{
+    color: var(--primary-color-dark);
+}
+
+span{
+    color: var(--primary-color-dark);
+}
+
+
+ul{
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.3rem;
+    transition: left 0.3s;
+}
+
+ul li a{
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+ul li a:hover{
+    color: var(--text-dark);
+}
+
+/* ... CSS yang telah ada ... */
+
+.section_container {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-top: 6rem;
+    padding: 1rem;
+    align-content: space-around;
+    text-align: center; /* Menengahkan judul */
+}
+
+.section_container h2 {
+    font-size: 2rem; /* Sesuaikan ukuran teks judul */
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem; /* Sesuaikan margin di bawah judul */
+}
+
+/* ... CSS yang telah ada ... */
+
+  .image-item {
+    text-align: center;
+}
+
+.image-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+.image-item h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+    
+}
+    
+  .image {
+    display: flex;
+    justify-content: space-around; 
+    gap: 1rem;
+  }
+  
+  .image + .image {
+    margin-top: 4rem; 
+  }
+
+  .image img {
+    width: 500px; /* Set the desired width for all images */
+    height: auto;
+    border-radius: 5%;
+    transition: transform 0.5s ease;
+    box-shadow: 5px 5px 20px rgb(170, 7, 7);
+
+    
+  }
+  
+
+  .image img:hover{
+    transform: scale(1.05);
+  }
